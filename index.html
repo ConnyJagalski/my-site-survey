@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Umfrageformular</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1 id="title">Umfrage zu meiner Onlinepräsentation</h1>
+    <p id="description">Vielen Dank, dass du mir hilfst meine Seite zu verbessern.</p>
+    <form id="survey-form" action="#">
+        <fieldset>
+            <label for="name" id="name-label">Name*
+                <input type="text" id="name" placeholder="Vorname Nachname" pattern="[a-zA-Z\s]+" minlength="5" required
+                    name="name">
+            </label>
+            <label for="email" id="email-label">Email*
+                <input type="email" id="email" placeholder="deine-email@email.com" required name="email">
+            </label>
+            <label for="number" id="number-label">Alter*
+                <input type="number" id="number" min="18" max="100" pattern="[0-9]" placeholder="25" required
+                    name="age">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Du bist</legend>
+            <label for="arbeitgeber">
+                <input type="radio" id="arbeitgeber" checked name="wer" value="arbeitgeber"> Arbeitgeber
+            </label>
+            <label for="privatperson">
+                <input type="radio" id="privatperson" name="wer" value="privatperson"> Privatperson
+            </label>
+        </fieldset>
+        <fieldset id="was-passt">
+            <legend>Folgendes passt zu unserem Unternehmen</legend>
+            <label>
+                <input type="checkbox" value="front-end" checked name="front-end"> Front-End gesamt
+            </label>
+            <label>
+                <input type="checkbox" value="farben" name="farben"> Farbgestaltung
+            </label>
+            <label>
+                <input type="checkbox" value="inhalt" name="inhalt"> Inhalt
+            </label>
+            <label>
+                <input type="checkbox" value="nichts" name="nichts"> leider nichts
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="dropdown">Gib mir eine Schulnote
+                <select id="dropdown" required name="note">
+                    <option value="">bitte wählen</option>
+                    <option value="sehr gut">sehr gut</option>
+                    <option value="gut">gut</option>
+                    <option value="befriedigend">befriedigend</option>
+                    <option value="ausreichend">ausreichend</option>
+                    <option value="mangelhaft">mangelhaft</option>
+                    <option value="ungenügend">ungenügend</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label>Deine Nachricht an mich
+                <textarea rows="3" cols="30" placeholder="Ich fand gut, dass... Ich fand nicht so gut, dass..." required
+                    minlength="3" name="nachricht"></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" name="submit" value="Senden" id="submit">
+    </form>
+</body>
+
+</html>
